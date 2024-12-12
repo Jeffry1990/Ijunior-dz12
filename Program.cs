@@ -4,14 +4,6 @@
     {
         static void Main(string[] args)
         {
-            float rublesInWallet;
-            float dollarsInWallet;
-            float euroInWallet;
-            int courseRubToUsd = 105, courseRubToEuro = 120, courseUsdToRub = 5, 
-                courseUsdToEuro = 7, courseEuroToRub = 3, courseEuroToUsd = 2;
-            float exchangeCurrencyCount;
-            string desiredOperation;
-
             const string ExchangeRubToUsd = "1";
             const string ExchangeRubToEuro = "2";
             const string ExchangeUsdToRub = "3";
@@ -20,6 +12,11 @@
             const string ExchangeEuroToRub = "6";
             const string CommandExit = "7";
 
+            float rublesInWallet, dollarsInWallet, euroInWallet;
+            int courseRubToUsd = 105, courseRubToEuro = 120, courseUsdToRub = 5, 
+                courseUsdToEuro = 7, courseEuroToRub = 3, courseEuroToUsd = 2;
+            float exchangeCurrencyCount;
+            string desiredOperation;
             bool isWork = true;
 
             Console.WriteLine("Добро пожаловать в обменник валют!");
@@ -118,7 +115,6 @@
                         break;
 
                     case ExchangeEuroToRub:
-
                         Console.Write($"\nОбмен евро на рубли\nСколько вы хотите обменять? ");
                         exchangeCurrencyCount = Convert.ToSingle(Console.ReadLine());
                         if (euroInWallet >= exchangeCurrencyCount)
